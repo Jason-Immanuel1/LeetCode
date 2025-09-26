@@ -21,6 +21,7 @@ Output: 2
 
 class Solution:
     def majorityElement(self, nums: list[int]) -> int:
+        # Store the numbers in a dictionary
         numbers_dict = {}
 
         for number in nums:
@@ -29,6 +30,7 @@ class Solution:
             else:
                 numbers_dict[number] = 1
 
+        # Return the Key with the most frequent values
         return max(numbers_dict, key=numbers_dict.get)
 
 
